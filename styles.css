@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,86,121,1) 45%, rgba(0,212,255,1) 100%);
+}
+
+img{
+    width: 32px;
+}
+
+.mainContainer{
+    position: relative;
+}
+
+.container{
+    position: relative;
+    padding: 50px;
+    width: 260px;
+    min-height: 380px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 20px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255, 0.1) 0% , rgba(255, 255, 255, 0.1) 2%);
+}
+
+.form h1{
+    letter-spacing: 2px;
+    margin: 0px 0px 40px 10px;
+}
+
+.form .inputBx{
+position: relative;
+width: 100%;
+margin-bottom: 30px;
+}
+
+.form .inputBx input{
+    width: 80%;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgb(255, 255, 255, 0.2);
+    padding: 8px 10px 8px 40px;
+    border-radius: 22px;
+    font-size: 19px;
+    box-shadow: 0,0,0,0.05;
+}
+
+.form .inputBx img{
+position: absolute;
+top: 6px;
+left: 8px;
+transform: scale(0.6);
+filter: invert(1);
+}
+
+.form .inputBx input[type=submit]{
+background: #fff;
+color: #111;
+max-width: 100px;
+padding: 8px 10px;
+letter-spacing: 1px;
+cursor: pointer;
+outline: none;
+border: 0.3px solid  rgba(255, 255, 255, 0.582)
+}
+
+
+.form .inputBx input[type=submit]:hover{
+    background: linear-gradient(115deg, rgba(0,0,0,0.1), rgba(255,255,255,0.25));
+    color: #fff;
+}
+
+.form .inputBx span{
+    position: absolute;
+    left: 30px;
+    padding: 10px;
+    display: inline-block;
+    pointer-events: none;
+}
+
+.form .inputBx input:focus ~ span,
+.form .inputBx input:valid ~ span{
+    transform: translateX(-30px) translateY(-33px);
+    font-size: 12px;
+}
+
+.form p{
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.form p a{
+    color: #fff;
+    font-size: 12px;
+}
+
+.form p a:hover{
+    color: #000000;
+}
